@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/Navbar';
+import Landing from './components/Landing';
+import Footer from './components/Footer';
+import Blog from './components/Blog';
+import BlogDetail from './components/BlogDetail';
+import MyWork from './components/MyWorks';
+import Work from './components/WorkDetail';
+
+import Default from './components/Default';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="conatiner-fluid">
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/blog" component={Blog} />
+        <Route path="/post/:id" component={BlogDetail} />
+        <Route path="/myworks/:id" component={Work} />
+        <Route path="/myworks" component={MyWork} />
+        <Route component={Default} />
+      </Switch>
+      <Footer />
     </div>
   );
 }

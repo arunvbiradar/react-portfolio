@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Playfair+Display:400,700');
+@primary-font: 'Playfair Display', serif;
+@secondary-font: 'Cutive Mono', monospace;
+
+// classes
+.font-bold {font-weight: 800}
+.font-light {font-weight: 300}
+.font-normal {font-weight: normal}
+.font-semi-bold {font-weight: 600}
+.text-theme-primary {font-family: @primary-font}
+.text-theme-secondary {font-family: @secondary-font}
+.display1 {
+	.font-normal;
+	font-size: 120px;
+	line-height: 150px;
+}
+.display2 {
+	.font-normal;
+	font-size: 100px;
+	line-height: 120px;
+}
+.display3 {
+	.font-normal;
+	font-size: 80px;
+	line-height: 100px;
+}
+.display4 {
+	.font-normal;
+	font-size: 60px;
+	line-height: 80px;
+}
+
+h1, h2, h3, h4, h5, h6,.display, .display, .display, .display, .display, .display {margin-bottom: 0.2em}
+h1, h2, h3, h4, h5, h6 {
+	.font-bold;
+	margin-top: 0;
+	font-family: @primary-font;
+}
+h1 {
+	font-size: 50px;
+	line-height: 60px;
+}
+h2 {
+	font-size: 36px;
+	line-height: 40px;
+}
+h3 {
+	font-size: 30px;
+	line-height: 34px;
+}
+h4 {
+	font-size: 24px;
+	line-height: 30px;
+}
+h5 {
+	font-size: 20px;
+	line-height: 24px;
+}
+h6 {
+	font-size: 16px;
+	line-height: 20px;
+}
+p {
+	margin: 0;
+	font-size: 16px;
+	line-height: 24px;
+	.text-theme-secondary;
+	& + p {margin-top: 20px}
+}
+li {
+	margin: 0;
+	font-size: 14px;
+	line-height: 20px;
+}
+.lead {
+	font-size: 30px;
+	line-height: 34px;
+	.text-theme-secondary;
+}
